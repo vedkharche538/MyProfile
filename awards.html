@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Past Job Information</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+#job-list {
+  list-style: none;
+  padding: 0;
+}
+
+.job-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.job-item h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.job-item p {
+  margin-top: 10px;
+  color: #777;
+}
+
+#awards-list {
+  list-style: none;
+  padding: 0;
+}
+
+.award-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.award-item h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.award-item p {
+  margin-top: 10px;
+  color: #777;
+}
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head>
+<body>
+    <div id="navigation"></div>
+  <div class="container">
+
+    <h1>Recognition and Awards</h1>
+    <ul id="awards-list">
+      <!-- Awards details will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script>
+   const pastJobs = [
+  {
+    company: 'Company 1',
+    awards: [
+      'Employee of the Month (June 2020)',
+      'Outstanding Achievement Award (2019)'
+    ]
+  },
+  {
+    company: 'XYZ Agency',
+    awards: [
+      'Best Graphic Designer (2017)',
+      'Creative Excellence Award (2016)'
+    ]
+  },
+  // Add more past jobs as needed
+];
+
+const awardsList = document.getElementById('awards-list');
+
+pastJobs.forEach((job) => {
+  const listItem = document.createElement('li');
+  listItem.classList.add('award-item');
+
+  const companyElement = document.createElement('h2');
+  companyElement.textContent = `Company: ${job.company}`;
+
+  listItem.appendChild(companyElement);
+
+  if (job.awards) {
+    const awardsContainer = document.createElement('ul');
+    awardsContainer.classList.add('awards-container');
+    
+    job.awards.forEach((award) => {
+      const awardItem = document.createElement('li');
+      awardItem.textContent = award;
+      awardsContainer.appendChild(awardItem);
+    });
+
+    listItem.appendChild(awardsContainer);
+  }
+
+  awardsList.appendChild(listItem);
+});
+
+  </script>
+  <script>
+    $(function() {
+      $("#navigation").load("navigation.html");
+    });
+  </script>
+</body>
+</html>

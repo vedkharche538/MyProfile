@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #f2f2f2a7;
+      color: #ffffff00;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="common.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head>
+<body>
+  <div id="navigation"></div>
+  <main style="margin-left: 30%;">
+    <h2>About Me</h2>
+      <ul>You can check out about me here :- <a href="about.html"> know me!</a></ul>
+    <h2>Work Experience</h2>
+      <ul>For more details about my past job's, visit my <a href="work.html">work experience</a> page.</ul>
+    <h2>Skills</h2>
+      <ul>For more details about my skills & Certifications, visit my <a href="skills.html">skills & Certifications</a> page.</ul>
+    <h2>Projects</h2>
+      <ul>For more details about my current projects, visit my <a href="projects.html">projects</a> page.</ul>
+    <h2>Awards & Achivements</h2>
+      <ul>For looking for my the Awards & Achivements look <a href="awards.html">here..</a></ul>
+    <h2>Education</h2>
+      <ul>View my education background here :- <a href="education.html"> education</a></ul>
+    <h2>My Hobbies</h2> 
+      <ul>View my hobbies we might have a similar one! <a href="hobbies.html">Let's Rock!🤘🏼</a></ul>
+    <h2>Contact Me</h2>
+      <ul> Feel free to reach out to me or connect with me, <a href="contact.html">here</a> :-)</ul>
+  </main>
+  <footer>
+    <p>&copy; 2024 Vedhas Kharche. All rights reserved.</p>
+  </footer>
+  <div id="page" hidden>home</div>
+  <script>
+    $(function() {
+      $("#navigation").load("navigation.html");
+    });
+  </script>
+</body>
+</html>

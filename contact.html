@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Information</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.contact-item h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-item p {
+  margin-top: 10px;
+  color: #777;
+}
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head>
+<body>
+    <div id="navigation"></div>
+  <div class="container">
+    <h1>“Contact Information”</h1>
+    <ul id="contact-list">
+      <!-- Contact details will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script>
+    const contactDetails = [
+  {
+    label: 'Email',
+    value: 'example@example.com'
+  },
+  {
+    label: 'Phone',
+    value: '+1 123 456 7890'
+  },
+  // Add more contact details as needed
+];
+
+const contactList = document.getElementById('contact-list');
+
+contactDetails.forEach((detail) => {
+  const listItem = document.createElement('li');
+  listItem.classList.add('contact-item');
+
+  const labelElement = document.createElement('h2');
+  labelElement.textContent = detail.label;
+
+  const valueElement = document.createElement('p');
+  valueElement.textContent = detail.value;
+
+  listItem.appendChild(labelElement);
+  listItem.appendChild(valueElement);
+
+  contactList.appendChild(listItem);
+});
+
+  </script>
+  <script>
+    $(function() {
+      $("#navigation").load("navigation.html");
+    });
+  </script>
+</body>
+</html>
