@@ -1,20 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Projects</title>
+  <title>Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    #projects-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-item {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .project-item h2 {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .project-item p {
+      margin-top: 10px;
+      color: #777;
+    }
+
+    .project-status {
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Ongoing Projects</h1>
-    </header>
-    <h4>Updation in progress....</h4>
-    <!-- <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
-    </section> -->
+  <div id="navigation"></div>
+  <div class="container">
+    <h1>“Projects”</h1>
+    <ul id="projects-list">
+    </ul>
+  </div>
+
+  <script>
+    const projects = [
+      {
+        title: 'AGROFINITY (2019-20)',
+        description: 'Introducing a revolutionary software solution designed to empower Indian farmers with unprecedented yields, from sowing to harvesting. This cutting-edge platform leverages advanced machine learning algorithms to transform the agricultural landscape in India, offering a novel approach to farming that prioritizes efficiency, sustainability, and profitability. By harnessing the power of AI, this solution provides farmers with real-time insights and predictive analytics, enabling them to make informed decisions that optimize crop health, yield, and market opportunities. This comprehensive tool is not just a step forward but a leap towards a future where agriculture is driven by data, precision, and innovation, ensuring that every farmer can achieve high-value yields and contribute to a thriving, sustainable ecosystem.',
+        technologies: ['Python', 'Machine Learning', 'Flask', 'IOT'],
+        awards: ['Nominated for the Smart India Hackathon', 'Won a price college level'],
+        status: 'Completed'
+      },
+      {
+        title: 'Library Management System (2018-19)',
+        description: 'Software Solution which handles libraries in more systematic manner. The Solution help librarian to manage all books and related entries in more efficient manner without paying too much attention in managing it.',
+        technologies: ['C++'],
+        status: 'Completed'
+      },
+      {
+        title: 'ABox Encryption (2017-18)',
+        description: 'Engineered a custom password management tool, to encrypt password using a unique encryption algorithm.',
+        technologies: ['C', 'C++'],
+        status: 'Completed'
+      }
+    ];
+
+    const projectsList = document.getElementById('projects-list');
+
+    projects.forEach((project) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('project-item');
+
+      const titleElement = document.createElement('h2');
+      titleElement.textContent = project.title;
+
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = project.description;
+
+      const technologiesElement = document.createElement('p');
+      technologiesElement.textContent = `Technologies Used: ${project.technologies.join(', ')}`;
+
+      const statusElement = document.createElement('p');
+      statusElement.classList.add('project-status');
+      statusElement.textContent = `Status: ${project.status}`;
+
+      listItem.appendChild(titleElement);
+      listItem.appendChild(descriptionElement);
+      listItem.appendChild(technologiesElement);
+      listItem.appendChild(statusElement);
+
+      projectsList.appendChild(listItem);
+    });
+
+  </script>
+  <script>
+    $(function () {
+      $("#navigation").load("navigation.html");
+    });
+  </script>
 </body>
+
 </html>

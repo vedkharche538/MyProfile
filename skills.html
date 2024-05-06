@@ -1,29 +1,164 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Skills & Certifications</title>
-</head>
-<body>
-    <header>
-        <h1>My Skills & Certifications</h1>
-    </header>
-    <h4>Updation in progress....</h4>
-    <!-- <section id="skills">
-        <h2>Programming Languages</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
-    </section> -->
+<head>
+  <title>Skills</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    #skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-item {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .skill-item h2 {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .skill-item p {
+      margin-top: 10px;
+      color: #777;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div id="navigation"></div>
+  <div class="container">
+    <h1>“Skills”</h1>
+    <ul id="skills-list">
+      <!-- Skills items will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script>
+    const skills = [
+      {
+        title: 'Python',
+        level: 'Expert',
+        description: 'Proficient in crafting dynamic web applications and data-driven solutions.'
+      },
+      {
+        title: 'HTML/CSS/JS',
+        level: 'Advanced',
+        description: 'Strong understanding of front-end web development for interactive user experiences.'
+      },
+      {
+        title: 'Git and Github',
+        level: 'Expert',
+        description: 'Skilled in version control and collaborative development practices.'
+      },
+      {
+        title: 'Linux',
+        level: 'Advanced',
+        description: 'Proficient in Linux administration and system management.'
+      },
+      {
+        title: 'AWS',
+        level: 'Expert',
+        description: 'Certified in AWS services for cloud computing and infrastructure.'
+      },
+      {
+        title: 'Docker',
+        level: 'Advanced',
+        description: 'Experienced in using Docker for containerization and deployment.'
+      },
+      {
+        title: 'Kubernetes',
+        level: 'Advanced',
+        description: 'Proficient in using Kubernetes for container orchestration and deployment.'
+      },
+      {
+        title: 'SQL',
+        level: 'Advanced',
+        description: 'Skilled in database management and querying for data analysis.'
+      },
+      {
+        title: 'GitLab',
+        level: 'Expert',
+        description: 'Experienced in using GitLab for continuous integration and delivery.'
+      },
+      {
+        title: 'Bash',
+        level: 'Advanced',
+        description: 'Skilled in automating tasks and managing system operations efficiently.'
+      },
+      {
+        title: 'GoLang',
+        level: 'Intermediate',
+        description: 'Proficient in building high-performance backend services.'
+      },
+      {
+        title: 'Qradar',
+        level: 'Advanced',
+        description: 'Experienced in using IBM QRadar for advanced security information and event management.'
+      },
+      {
+        title: 'SIEM',
+        description: 'Knowledgeable in Security Information and Event Management for comprehensive threat monitoring and analysis, also worked on developing Splunk and Qradar SIEM Apps.'
+      },
+      {
+        title: 'SWG/CASB/ZTNA/RBI',
+        description: 'Equipped with a deep understanding of SWG, CASB, ZTNA, and RBI, I possess the knowledge and know-how to navigate the complexities of modern cybersecurity, ensuring secure and efficient operations in the digital landscape.'
+      }
+    ];
+
+    const skillsList = document.getElementById('skills-list');
+
+    skills.forEach((skill) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('skill-item');
+
+      const titleElement = document.createElement('h2');
+      titleElement.textContent = skill.title;
+
+      const levelElement = document.createElement('p');
+      levelElement.textContent = `Level: ${skill.level || 'N/A'}`;
+
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = skill.description;
+
+      listItem.appendChild(titleElement);
+      listItem.appendChild(levelElement);
+      listItem.appendChild(descriptionElement);
+
+      skillsList.appendChild(listItem);
+    });
+
+  </script>
+  <script>
+    $(function () {
+      $("#navigation").load("navigation.html");
+    });
+  </script>
 </body>
+
 </html>

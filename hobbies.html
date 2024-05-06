@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>My Hobbies</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-}
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-h1 {
-  text-align: center;
-  color: #333;
-}
+    h1 {
+      text-align: center;
+      color: #333;
+    }
 
-#hobby-list {
-  list-style: none;
-  padding: 0;
-}
+    #hobby-list {
+      list-style: none;
+      padding: 0;
+    }
 
-.hobby-item {
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-}
+    .hobby-item {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
 
-.hobby-item h2 {
-  font-size: 18px;
-  color: #333;
-}
+    .hobby-item h2 {
+      font-size: 18px;
+      color: #333;
+    }
 
-.hobby-item p {
-  margin-top: 10px;
-  color: #777;
-}
-
+    .hobby-item p {
+      margin-top: 10px;
+      color: #777;
+    }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
   <div id="navigation"></div>
   <div class="container">
@@ -60,40 +61,44 @@ h1 {
 
   <script>
     const hobbies = [
-  {
-    name: 'Photography',
-    description: 'Capturing moments through the lens.'
-  },
-  {
-    name: 'Playing Guitar',
-    description: 'Strumming melodies and creating music.'
-  },
-  // Add more hobbies as needed
-];
+      {
+        name: 'Coding',
+        description: "Beyond the digital realm, I find joy in the simple pleasures of life, such as the thrill of a well-executed bug fix, the satisfaction of a perfectly timed coffee break, and the sheer delight of discovering a new programming language that doesn't exist yet.When not immersed in code, you might find me exploring the vast universe of Stack Overflow, seeking enlightenment from the ancient texts of GitHub."
+      },
+      {
+        name: 'Football',
+        description: "From the thrill of a virtual victory to the exhilaration of a real-life goal, my love for football knows no bounds. Whether it's strategizing in the digital arena or leading my team to glory on the field, every moment is a testament to the passion that fuels my game. With every pass, every tackle, and every goal, I'm not just playing football; I'm living the dream, one kick at a time."
+      },
+      {
+        name: 'Travelling',
+        description: 'In the vast tapestry of India, my solo adventures weave tales of tranquility and discovery. From the serene shores of Goa to the tranquil trails of the Himalayas, I seek out the hidden gems that offer peace and solitude amidst the bustling vibrancy of the nation. Each journey is a quest for the quietude that lies beyond the crowds, a search for the serene spaces where the only companions are the whispers of the wind and the gentle rustle of leaves. While my dreams of international travel beckon, my heart remains rooted in the promise of exploring the vastness of my homeland, one peaceful place at a time.'
+      }
+    ];
 
-const hobbyList = document.getElementById('hobby-list');
+    const hobbyList = document.getElementById('hobby-list');
 
-hobbies.forEach((hobby) => {
-  const listItem = document.createElement('li');
-  listItem.classList.add('hobby-item');
+    hobbies.forEach((hobby) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('hobby-item');
 
-  const nameElement = document.createElement('h2');
-  nameElement.textContent = hobby.name;
+      const nameElement = document.createElement('h2');
+      nameElement.textContent = hobby.name;
 
-  const descriptionElement = document.createElement('p');
-  descriptionElement.textContent = hobby.description;
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = hobby.description;
 
-  listItem.appendChild(nameElement);
-  listItem.appendChild(descriptionElement);
+      listItem.appendChild(nameElement);
+      listItem.appendChild(descriptionElement);
 
-  hobbyList.appendChild(listItem);
-});
+      hobbyList.appendChild(listItem);
+    });
 
   </script>
   <script>
-    $(function() {
+    $(function () {
       $("#navigation").load("navigation.html");
     });
   </script>
 </body>
+
 </html>

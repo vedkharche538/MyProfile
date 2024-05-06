@@ -2,61 +2,108 @@
 <html>
 
 <head>
-    <title>About Me</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
 
-        .content {
-            background-color: white;
-            width: 50%;
-            margin: auto;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
 
-        ul {
-            list-style-type: none;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    li b {
+      color: #007bff;
+    }
+
+    p {
+      text-align: center;
+      color: #777;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <div id="navigation"></div>
-    <div class="content">
-        <h1>“about me!”</h1>
-        <ul>
-            <li><b>> </b>I'm a passionate coder and professional software developer who loves to code.👨🏻‍💻</li>
-            <li><b>> </b>I thrive on solving complex problems 🚀 and creating innovative solutions.</li>
-            <li><b>> </b>Have a strong command of various programming languages and technologies.</li>
-            <li><b>> </b>Well-versed in technology and writing
-                code to create systems that are reliable and user-friendly.</li>
-            <li><b>> </b>Team player and enjoy collaborating with others on projects.🤝 Also, Skilled
-                leader who has the proven ability to motivate, educate, and manage
-                a team to build software programs and effectively track changes.</li>
-            <li><b>> </b>I stay up-to-date 🌐 with the latest industry trends and best practices.</li>
-            <li><b>> </b>Committed to delivering high-quality software products.🔝</li>
-            <li><b>> </b>Constantly seek opportunities to learn and grow as a developer.</li>
-            <li><b>> </b>Confident communicator, strategic thinker, and innovative creator 💡
-                to develop software that is customised to meet a organisational
-                needs, highlight their core competencies, and further their success.🙂</li>
-        </ul>
-        <p>It's super nice to meet you :-)</p>
-    </div>
-    <script>
-        $(function() {
-          $("#navigation").load("navigation.html");
-        });
-      </script>
+  <div id="navigation"></div>
+  <div class="container">
+    <h1>“About Me!”</h1>
+    <ul id="about-me-list">
+      <!-- About Me items will be dynamically added here -->
+    </ul>
+    <b>It's super nice to meet you :-)</b>
+  </div>
+
+  <script>
+    const aboutMeItems = [
+      {
+        text: 'I\'m a passionate coder and professional software developer who loves to code.👨🏻‍💻'
+      },
+      {
+        text: 'I thrive on solving complex problems 🚀 and creating innovative solutions.'
+      },
+      {
+        text: 'Have a strong command of various programming languages and technologies.'
+      },
+      {
+        text: 'Well-versed in technology and writing code to create systems that are reliable and user-friendly.'
+      },
+      {
+        text: 'Team player and enjoy collaborating with others on projects.🤝 Also, Skilled leader who has the proven ability to motivate, educate, and manage a team to build software programs and effectively track changes.'
+      },
+      {
+        text: 'I stay up-to-date 🌐 with the latest industry trends and best practices.'
+      },
+      {
+        text: 'Committed to delivering high-quality software products.🔝'
+      },
+      {
+        text: 'Constantly seek opportunities to learn and grow as a developer.'
+      },
+      {
+        text: 'Confident communicator, strategic thinker, and innovative creator 💡 to develop software that is customised to meet an organisational needs, highlight their core competencies, and further their success.🙂'
+      }
+    ];
+
+    const aboutMeList = document.getElementById('about-me-list');
+
+    aboutMeItems.forEach((item) => {
+      const listItem = document.createElement('li');
+      const textElement = document.createElement('p');
+      textElement.textContent = item.text;
+      listItem.appendChild(textElement);
+      aboutMeList.appendChild(listItem);
+    });
+
+  </script>
+  <script>
+    $(function () {
+      $("#navigation").load("navigation.html");
+    });
+  </script>
 </body>
 
 </html>

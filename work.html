@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Past Job Information</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-}
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-h1 {
-  text-align: center;
-  color: #333;
-}
+    h1 {
+      text-align: center;
+      color: #333;
+    }
 
-#job-list {
-  list-style: none;
-  padding: 0;
-}
+    #job-list {
+      list-style: none;
+      padding: 0;
+    }
 
-.job-item {
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-}
+    .job-item {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
 
-.job-item h2 {
-  font-size: 18px;
-  color: #333;
-}
+    .job-item h2 {
+      font-size: 18px;
+      color: #333;
+    }
 
-.job-item p {
-  margin-top: 10px;
-  color: #777;
-}
-
+    .job-item p {
+      margin-top: 10px;
+      color: #777;
+    }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <div id="navigation"></div>
+  <div id="navigation"></div>
   <div class="container">
     <h1>“Past Work Experience”</h1>
     <ul id="job-list">
@@ -60,61 +61,67 @@ h1 {
 
   <script>
     const pastJobs = [
-  {
-    title: 'Software Developer',
-    company: 'Company 1',
-    duration: 'January 2019 - March 2021',
-    description: 'Worked on developing web applications using JavaScript, HTML, and CSS. Collaborated with a team to implement new features and fix bugs. Participated in code reviews and contributed to the improvement of development processes.',
-    promotion: 'Promoted to Senior Software Developer in September 2020.'
-  },
-  {
-    title: 'Graphic Designer',
-    company: 'XYZ Agency',
-    duration: 'June 2016 - December 2018',
-    description: 'Created visually appealing designs for various clients, including logos, brochures, and website layouts. Worked closely with clients to understand their design requirements and delivered high-quality design solutions within tight deadlines.'
-  },
-  // Add more past jobs as needed
-];
+      {
+        title: 'Software Developer - II',
+        company: 'Forcepoint',
+        duration: 'January 2023 - Present',
+        description: "Working on Forcepoint One's logging and analytics pipeline. Responsible for enhancing the functionalities of various pipeline services and maintaining them to ensure close to 100% availability of the real-time data processing pipeline. The log data processed belongs to diﬀerent point products namely Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Zero Trust Network Access (ZTNA) and Remote Browser Isolation (RBI)."
+      },
+      {
+        title: 'Senior Software Engineer',
+        company: 'Persistent Systems Ltd',
+        duration: 'March 2022 - January 2023',
+        description: "Efficiently navigating the software development lifecycle, I prioritize and execute tasks to develop high-quality software designs and architectures, ensuring applications meet stringent security and functionality standards. My approach emphasizes producing clean, efficient code and automating tasks through effective tools and scripting, streamlining the development process for optimal outcomes."
+      },
+      {
+        title: 'Software Engineer',
+        company: 'Persistent Systems Ltd',
+        duration: 'July 2020 - March 2022',
+        description: "Led the development and maintenance of scalable, efficient RESTful APIs using Python for 'Swayam,' a pivotal government project, enhancing its impact. Additionally, I designed, managed, and monitored web applications on Google Cloud Platform (GCP), optimizing for high traffic, superior user experience, and future-proof compatibility.",
+        promotion: 'Promoted to Senior Software Engineer'
+      }
+    ];
 
-const jobList = document.getElementById('job-list');
+    const jobList = document.getElementById('job-list');
 
-pastJobs.forEach((job) => {
-  const listItem = document.createElement('li');
-  listItem.classList.add('job-item');
+    pastJobs.forEach((job) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('job-item');
 
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = job.title;
+      const titleElement = document.createElement('h2');
+      titleElement.textContent = job.title;
 
-  const companyElement = document.createElement('p');
-  companyElement.textContent = `Company: ${job.company}`;
+      const companyElement = document.createElement('p');
+      companyElement.textContent = `Company: ${job.company}`;
 
-  const durationElement = document.createElement('p');
-  durationElement.textContent = `Duration: ${job.duration}`;
+      const durationElement = document.createElement('p');
+      durationElement.textContent = `Duration: ${job.duration}`;
 
-  const descriptionElement = document.createElement('p');
-  descriptionElement.textContent = `Description: ${job.description}`;
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = `Description: ${job.description}`;
 
-  const promotionElement = document.createElement('p');
-  if (job.promotion) {
-    promotionElement.textContent = `Promotion: ${job.promotion}`;
-  }
+      const promotionElement = document.createElement('p');
+      if (job.promotion) {
+        promotionElement.textContent = `Promotion: ${job.promotion}`;
+      }
 
-  listItem.appendChild(titleElement);
-  listItem.appendChild(companyElement);
-  listItem.appendChild(durationElement);
-  listItem.appendChild(descriptionElement);
-  if (job.promotion) {
-    listItem.appendChild(promotionElement);
-  }
+      listItem.appendChild(titleElement);
+      listItem.appendChild(companyElement);
+      listItem.appendChild(durationElement);
+      listItem.appendChild(descriptionElement);
+      if (job.promotion) {
+        listItem.appendChild(promotionElement);
+      }
 
-  jobList.appendChild(listItem);
-});
+      jobList.appendChild(listItem);
+    });
 
   </script>
   <script>
-    $(function() {
+    $(function () {
       $("#navigation").load("navigation.html");
     });
   </script>
 </body>
+
 </html>
