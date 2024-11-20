@@ -1,127 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Past Job Information</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+    <title>Past Job Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #007bff;
+            color: white;
+            margin-top: 40px;
+        }
 
-    #job-list {
-      list-style: none;
-      padding: 0;
-    }
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .job-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        #job-list {
+            list-style: none;
+            padding: 0;
+        }
 
-    .job-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .job-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-    .job-item p {
-      margin-top: 10px;
-      color: #777;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        .job-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .job-item h2 {
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .job-item p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div id="navigation"></div>
-  <div class="container">
-    <h1>“Past Work Experience”</h1>
-    <ul id="job-list">
-      <!-- Job details will be dynamically added here -->
-    </ul>
-  </div>
+    <div id="navigation"></div>
+    <div class="container">
+        <h1>Past Work Experience</h1>
+        <ul id="job-list">
+            <!-- Job details will be dynamically added here -->
+        </ul>
+    </div>
+    <footer>
+        &copy; 2024 Vedhas Kharche. All rights reserved.
+    </footer>
 
-  <script>
-    const pastJobs = [
-      {
-        title: 'Software Developer - II',
-        company: 'Forcepoint',
-        duration: 'January 2023 - Present',
-        description: "Working on Forcepoint One's logging and analytics pipeline. Responsible for enhancing the functionalities of various pipeline services and maintaining them to ensure close to 100% availability of the real-time data processing pipeline. The log data processed belongs to diﬀerent point products namely Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Zero Trust Network Access (ZTNA) and Remote Browser Isolation (RBI)."
-      },
-      {
-        title: 'Senior Software Engineer',
-        company: 'Persistent Systems Ltd',
-        duration: 'March 2022 - January 2023',
-        description: "Efficiently navigating the software development lifecycle, I prioritize and execute tasks to develop high-quality software designs and architectures, ensuring applications meet stringent security and functionality standards. My approach emphasizes producing clean, efficient code and automating tasks through effective tools and scripting, streamlining the development process for optimal outcomes."
-      },
-      {
-        title: 'Software Engineer',
-        company: 'Persistent Systems Ltd',
-        duration: 'July 2020 - March 2022',
-        description: "Led the development and maintenance of scalable, efficient RESTful APIs using Python for 'Swayam,' a pivotal government project, enhancing its impact. Additionally, I designed, managed, and monitored web applications on Google Cloud Platform (GCP), optimizing for high traffic, superior user experience, and future-proof compatibility.",
-        promotion: 'Promoted to Senior Software Engineer'
-      }
-    ];
+    <script>
+        const pastJobs = [
+            {
+                title: 'Software Developer - II',
+                company: 'Forcepoint',
+                duration: 'January 2023 - Present',
+                description: "Working on Forcepoint One's logging and analytics pipeline. Responsible for enhancing the functionalities of various pipeline services and maintaining them to ensure close to 100% availability of the real-time data processing pipeline. The log data processed belongs to different point products namely Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Zero Trust Network Access (ZTNA), and Remote Browser Isolation (RBI)."
+            },
+            {
+                title: 'Senior Software Engineer',
+                company: 'Persistent Systems Ltd',
+                duration: 'March 2022 - January 2023',
+                description: "Efficiently navigating the software development lifecycle, I prioritize and execute tasks to develop high-quality software designs and architectures, ensuring applications meet stringent security and functionality standards. My approach emphasizes producing clean, efficient code and automating tasks through effective tools and scripting, streamlining the development process for optimal outcomes."
+            },
+            {
+                title: 'Software Engineer',
+                company: 'Persistent Systems Ltd',
+                duration: 'July 2020 - March 2022',
+                description: "Led the development and maintenance of scalable, efficient RESTful APIs using Python for 'Swayam,' a pivotal government project, enhancing its impact. Additionally, I designed, managed, and monitored web applications on Google Cloud Platform (GCP), optimizing for high traffic, superior user experience, and future-proof compatibility.",
+                promotion: 'Promoted to Senior Software Engineer'
+            }
+        ];
 
-    const jobList = document.getElementById('job-list');
+        const jobList = document.getElementById('job-list');
 
-    pastJobs.forEach((job) => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('job-item');
+        pastJobs.forEach((job) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('job-item');
 
-      const titleElement = document.createElement('h2');
-      titleElement.textContent = job.title;
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = job.title;
 
-      const companyElement = document.createElement('p');
-      companyElement.textContent = `Company: ${job.company}`;
+            const collapsibleButton = document.createElement('button');
+            collapsibleButton.classList.add('collapsible');
+            collapsibleButton.textContent = 'View Details';
 
-      const durationElement = document.createElement('p');
-      durationElement.textContent = `Duration: ${job.duration}`;
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('content');
 
-      const descriptionElement = document.createElement('p');
-      descriptionElement.textContent = `Description: ${job.description}`;
+            const companyElement = document.createElement('p');
+            companyElement.textContent = `Company: ${job.company}`;
 
-      const promotionElement = document.createElement('p');
-      if (job.promotion) {
-        promotionElement.textContent = `Promotion: ${job.promotion}`;
-      }
+            const durationElement = document.createElement('p');
+            durationElement.textContent = `Duration: ${job.duration}`;
 
-      listItem.appendChild(titleElement);
-      listItem.appendChild(companyElement);
-      listItem.appendChild(durationElement);
-      listItem.appendChild(descriptionElement);
-      if (job.promotion) {
-        listItem.appendChild(promotionElement);
-      }
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = job.description;
 
-      jobList.appendChild(listItem);
-    });
+            const promotionElement = document.createElement('p');
+            if (job.promotion) {
+                promotionElement.textContent = `Promotion: ${job.promotion}`;
+            }
 
-  </script>
-  <script>
-    $(function () {
-      $("#navigation").load("navigation.html");
-    });
-  </script>
+            contentDiv.appendChild(companyElement);
+            contentDiv.appendChild(durationElement);
+            contentDiv.appendChild(descriptionElement);
+            if (job.promotion) {
+                contentDiv.appendChild(promotionElement);
+            }
+
+            collapsibleButton.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+
+            listItem.appendChild(titleElement);
+            listItem.appendChild(collapsibleButton);
+            listItem.appendChild(contentDiv);
+
+            jobList.appendChild(listItem);
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </body>
 
 </html>

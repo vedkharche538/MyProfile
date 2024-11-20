@@ -1,104 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>My Hobbies</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
-    #hobby-list {
-      list-style: none;
-      padding: 0;
-    }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
 
-    .hobby-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    .hobby-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .hobby-item p {
-      margin-top: 10px;
-      color: #777;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        #hobby-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hobby-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hobby-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .hobby-item p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div id="navigation"></div>
-  <div class="container">
-    <h1>“My Hobbies”</h1>
-    <ul id="hobby-list">
-      <!-- Hobby items will be dynamically added here -->
-    </ul>
-  </div>
+    <!-- Navigation dynamically loaded -->
+    <div id="navigation"></div>
 
-  <script>
-    const hobbies = [
-      {
-        name: 'Coding',
-        description: "Beyond the digital realm, I find joy in the simple pleasures of life, such as the thrill of a well-executed bug fix, the satisfaction of a perfectly timed coffee break, and the sheer delight of discovering a new programming language that doesn't exist yet.When not immersed in code, you might find me exploring the vast universe of Stack Overflow, seeking enlightenment from the ancient texts of GitHub."
-      },
-      {
-        name: 'Football',
-        description: "From the thrill of a virtual victory to the exhilaration of a real-life goal, my love for football knows no bounds. Whether it's strategizing in the digital arena or leading my team to glory on the field, every moment is a testament to the passion that fuels my game. With every pass, every tackle, and every goal, I'm not just playing football; I'm living the dream, one kick at a time."
-      },
-      {
-        name: 'Travelling',
-        description: 'In the vast tapestry of India, my solo adventures weave tales of tranquility and discovery. From the serene shores of Goa to the tranquil trails of the Himalayas, I seek out the hidden gems that offer peace and solitude amidst the bustling vibrancy of the nation. Each journey is a quest for the quietude that lies beyond the crowds, a search for the serene spaces where the only companions are the whispers of the wind and the gentle rustle of leaves. While my dreams of international travel beckon, my heart remains rooted in the promise of exploring the vastness of my homeland, one peaceful place at a time.'
-      }
-    ];
+    <!-- Hobbies Section -->
+    <div class="container">
+        <h1>My Hobbies</h1>
+        <ul id="hobby-list">
+            <!-- Hobby items will be dynamically added here -->
+        </ul>
+    </div>
 
-    const hobbyList = document.getElementById('hobby-list');
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Vedhas Kharche. All rights reserved.
+    </footer>
 
-    hobbies.forEach((hobby) => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('hobby-item');
+    <script>
+        const hobbies = [
+            {
+                name: 'Coding',
+                description: "Beyond the digital realm, I find joy in the simple pleasures of life, such as the thrill of a well-executed bug fix, the satisfaction of a perfectly timed coffee break, and the sheer delight of discovering a new programming language that doesn't exist yet. When not immersed in code, you might find me exploring the vast universe of Stack Overflow, seeking enlightenment from the ancient texts of GitHub."
+            },
+            {
+                name: 'Football',
+                description: "From the thrill of a virtual victory to the exhilaration of a real-life goal, my love for football knows no bounds. Whether it's strategizing in the digital arena or leading my team to glory on the field, every moment is a testament to the passion that fuels my game. With every pass, every tackle, and every goal, I'm not just playing football; I'm living the dream, one kick at a time."
+            },
+            {
+                name: 'Travelling',
+                description: 'In the vast tapestry of India, my solo adventures weave tales of tranquility and discovery. From the serene shores of Goa to the tranquil trails of the Himalayas, I seek out the hidden gems that offer peace and solitude amidst the bustling vibrancy of the nation. Each journey is a quest for the quietude that lies beyond the crowds, a search for the serene spaces where the only companions are the whispers of the wind and the gentle rustle of leaves. While my dreams of international travel beckon, my heart remains rooted in the promise of exploring the vastness of my homeland, one peaceful place at a time.'
+            }
+        ];
 
-      const nameElement = document.createElement('h2');
-      nameElement.textContent = hobby.name;
+        const hobbyList = document.getElementById('hobby-list');
 
-      const descriptionElement = document.createElement('p');
-      descriptionElement.textContent = hobby.description;
+        hobbies.forEach((hobby) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('hobby-item');
 
-      listItem.appendChild(nameElement);
-      listItem.appendChild(descriptionElement);
+            const nameElement = document.createElement('h2');
+            nameElement.textContent = hobby.name;
 
-      hobbyList.appendChild(listItem);
-    });
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = hobby.description;
 
-  </script>
-  <script>
-    $(function () {
-      $("#navigation").load("navigation.html");
-    });
-  </script>
+            listItem.appendChild(nameElement);
+            listItem.appendChild(descriptionElement);
+
+            hobbyList.appendChild(listItem);
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </body>
 
 </html>

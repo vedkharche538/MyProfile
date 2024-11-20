@@ -1,136 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Past Job Information</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition and Awards</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
 
-    h1,
-    h2 {
-      text-align: center;
-      color: #333;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
-    #job-list {
-      list-style: none;
-      padding: 0;
-    }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
 
-    .job-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    .job-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .job-item p {
-      margin-top: 10px;
-      color: #777;
-    }
+        #awards-list {
+            list-style: none;
+            padding: 0;
+        }
 
-    #awards-list {
-      list-style: none;
-      padding: 0;
-    }
+        .award-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .award-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        .award-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-    .award-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .award-item ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
 
-    .award-item p {
-      margin-top: 10px;
-      color: #777;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        .award-item ul li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .award-item p {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div id="navigation"></div>
-  <div class="container">
+    <!-- Navigation dynamically loaded -->
+    <div id="navigation"></div>
 
-    <h1>Recognition and Awards</h1>
-    <ul id="awards-list">
-    </ul>
-  </div>
+    <!-- Awards Section -->
+    <div class="container">
+        <h1>Recognition and Awards</h1>
+        <ul id="awards-list"></ul>
+    </div>
 
-  <script>
-    const pastJobs = [
-      {
-        company: 'Persistent Systems Limited',
-        awards: [
-          'Top Talent Awards Year (2022-23)',
-          '3 Times Individual Award (2021-22)',
-          '3 Times Bravo Team Award (2021-22)'
-        ],
-        description: 'Recognized for outstanding performance throughout 2021-23 and for exceptional mentoring in implementing new functionalities and facilitating quick resolutions.'
-      },
-    ];
+    <!-- Footer -->
+    <footer>
+        © 2024 My Portfolio - All Rights Reserved
+    </footer>
 
-    const awardsList = document.getElementById('awards-list');
+    <script>
+        const pastJobs = [
+            {
+                company: 'Persistent Systems Limited',
+                awards: [
+                    'Top Talent Awards Year (2022-23)',
+                    '3 Times Individual Award (2021-22)',
+                    '3 Times Bravo Team Award (2021-22)'
+                ],
+                description: 'Recognized for outstanding performance throughout 2021-23 and for exceptional mentoring in implementing new functionalities and facilitating quick resolutions.'
+            },
+        ];
 
-    pastJobs.forEach((job) => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('award-item');
+        const awardsList = document.getElementById('awards-list');
 
-      const companyElement = document.createElement('h2');
-      companyElement.textContent = `Company: ${job.company}`;
+        pastJobs.forEach((job) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('award-item');
 
-      listItem.appendChild(companyElement);
+            const companyElement = document.createElement('h2');
+            companyElement.textContent = `Company: ${job.company}`;
+            listItem.appendChild(companyElement);
 
-      if (job.awards) {
-        const awardsContainer = document.createElement('ul');
-        awardsContainer.classList.add('awards-container');
+            if (job.awards) {
+                const awardsContainer = document.createElement('ul');
+                job.awards.forEach((award) => {
+                    const awardItem = document.createElement('li');
+                    awardItem.textContent = award;
+                    awardsContainer.appendChild(awardItem);
+                });
+                listItem.appendChild(awardsContainer);
+            }
 
-        job.awards.forEach((award) => {
-          const awardItem = document.createElement('li');
-          awardItem.textContent = award;
-          awardsContainer.appendChild(awardItem);
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = job.description;
+            listItem.appendChild(descriptionElement);
+
+            awardsList.appendChild(listItem);
         });
+    </script>
 
-        listItem.appendChild(awardsContainer);
-      }
-      const descriptionElement = document.createElement('p');
-      descriptionElement.textContent = job.description;
-      listItem.appendChild(descriptionElement);
-
-      awardsList.appendChild(listItem);
-    });
-
-  </script>
-  <script>
-    $(function () {
-      $("#navigation").load("navigation.html");
-    });
-  </script>
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </body>
 
 </html>

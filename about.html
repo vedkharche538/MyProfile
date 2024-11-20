@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>About Me</title>
@@ -7,97 +7,61 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 20px auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+
     .container h1 {
       text-align: center;
+      font-size: 2.5rem;
       color: #333;
-    }
-
-    .container ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .container li {
       margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
     }
 
-    .container li b {
-      color: #007bff;
-    }
-
-    .container p {
-      text-align: center;
-      color: #777;
+    p {
+      color: #555;
+      line-height: 1.6;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+  <!-- Navigation dynamically loaded -->
   <div id="navigation"></div>
+
   <div class="container">
-    <h1>“About Me!”</h1>
-    <ul id="about-me-list">
-    </ul>
-    <b>It's super nice to meet you :-)</b>
+    <h1>About Me</h1>
+    <p>
+      Hello! I am a software developer with expertise in Python and other modern technologies. Over the years, I have
+      worked on various innovative projects that span cloud computing, machine learning, and cybersecurity. I enjoy
+      problem-solving and continuously strive to expand my skill set.
+    </p>
+    <p>
+      I am passionate about crafting efficient and scalable solutions that make a real impact. When I'm not coding, you
+      can find me exploring new tech trends or indulging in my favorite hobbies.
+    </p>
   </div>
-
-  <script>
-    const aboutMeItems = [
-      {
-        text: 'I\'m a passionate coder and professional software developer who loves to code.👨🏻‍💻'
-      },
-      {
-        text: 'I thrive on solving complex problems 🚀 and creating innovative solutions.'
-      },
-      {
-        text: 'Have a strong command of various programming languages and technologies.'
-      },
-      {
-        text: 'Well-versed in technology and writing code to create systems that are reliable and user-friendly.'
-      },
-      {
-        text: 'Team player and enjoy collaborating with others on projects.🤝 Also, Skilled leader who has the proven ability to motivate, educate, and manage a team to build software programs and effectively track changes.'
-      },
-      {
-        text: 'I stay up-to-date 🌐 with the latest industry trends and best practices.'
-      },
-      {
-        text: 'Committed to delivering high-quality software products.🔝'
-      },
-      {
-        text: 'Constantly seek opportunities to learn and grow as a developer.'
-      },
-      {
-        text: 'Confident communicator, strategic thinker, and innovative creator 💡 to develop software that is customised to meet an organisational needs, highlight their core competencies, and further their success.🙂'
-      }
-    ];
-
-    const aboutMeList = document.getElementById('about-me-list');
-
-    aboutMeItems.forEach((item) => {
-      const listItem = document.createElement('li');
-      const textElement = document.createElement('p');
-      textElement.textContent = item.text;
-      listItem.appendChild(textElement);
-      aboutMeList.appendChild(listItem);
-    });
-
-  </script>
+  <footer>
+    &copy; 2024 Vedhas Kharche. All rights reserved.
+  </footer>
   <script>
     $(function () {
       $("#navigation").load("navigation.html");

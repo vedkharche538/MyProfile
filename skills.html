@@ -1,164 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Skills</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+    <title>Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    #skills-list {
-      list-style: none;
-      padding: 0;
-    }
+        #skills-list {
+            list-style: none;
+            padding: 0;
+        }
 
-    .skill-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        .skill-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
 
-    .skill-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .skill-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
 
-    .skill-item p {
-      margin-top: 10px;
-      color: #777;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        .skill-item h2 {
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .skill-item p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #007bff;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div id="navigation"></div>
-  <div class="container">
-    <h1>“Skills”</h1>
-    <ul id="skills-list">
-      <!-- Skills items will be dynamically added here -->
-    </ul>
-  </div>
+    <div id="navigation"></div>
+    <div class="container">
+        <h1>Skills</h1>
+        <ul id="skills-list">
+            <!-- Skills items will be dynamically added here -->
+        </ul>
+    </div>
+    <footer>
+        &copy; 2024 Vedhas Kharche. All rights reserved.
+    </footer>
 
-  <script>
-    const skills = [
-      {
-        title: 'Python',
-        level: 'Expert',
-        description: 'Proficient in crafting dynamic web applications and data-driven solutions.'
-      },
-      {
-        title: 'HTML/CSS/JS',
-        level: 'Advanced',
-        description: 'Strong understanding of front-end web development for interactive user experiences.'
-      },
-      {
-        title: 'Git and Github',
-        level: 'Expert',
-        description: 'Skilled in version control and collaborative development practices.'
-      },
-      {
-        title: 'Linux',
-        level: 'Advanced',
-        description: 'Proficient in Linux administration and system management.'
-      },
-      {
-        title: 'AWS',
-        level: 'Expert',
-        description: 'Certified in AWS services for cloud computing and infrastructure.'
-      },
-      {
-        title: 'Docker',
-        level: 'Advanced',
-        description: 'Experienced in using Docker for containerization and deployment.'
-      },
-      {
-        title: 'Kubernetes',
-        level: 'Advanced',
-        description: 'Proficient in using Kubernetes for container orchestration and deployment.'
-      },
-      {
-        title: 'SQL',
-        level: 'Advanced',
-        description: 'Skilled in database management and querying for data analysis.'
-      },
-      {
-        title: 'GitLab',
-        level: 'Expert',
-        description: 'Experienced in using GitLab for continuous integration and delivery.'
-      },
-      {
-        title: 'Bash',
-        level: 'Advanced',
-        description: 'Skilled in automating tasks and managing system operations efficiently.'
-      },
-      {
-        title: 'GoLang',
-        level: 'Intermediate',
-        description: 'Proficient in building high-performance backend services.'
-      },
-      {
-        title: 'Qradar',
-        level: 'Advanced',
-        description: 'Experienced in using IBM QRadar for advanced security information and event management.'
-      },
-      {
-        title: 'SIEM',
-        description: 'Knowledgeable in Security Information and Event Management for comprehensive threat monitoring and analysis, also worked on developing Splunk and Qradar SIEM Apps.'
-      },
-      {
-        title: 'SWG/CASB/ZTNA/RBI',
-        description: 'Equipped with a deep understanding of SWG, CASB, ZTNA, and RBI, I possess the knowledge and know-how to navigate the complexities of modern cybersecurity, ensuring secure and efficient operations in the digital landscape.'
-      }
-    ];
+    <script>
+        const skills = [
+            {
+                title: 'Python',
+                level: 'Expert',
+                description: 'Proficient in crafting dynamic web applications and data-driven solutions.'
+            },
+            {
+                title: 'HTML/CSS/JS',
+                level: 'Advanced',
+                description: 'Strong understanding of front-end web development for interactive user experiences.'
+            },
+            {
+                title: 'Git and Github',
+                level: 'Expert',
+                description: 'Skilled in version control and collaborative development practices.'
+            },
+            {
+                title: 'Linux',
+                level: 'Advanced',
+                description: 'Proficient in Linux administration and system management.'
+            },
+            {
+                title: 'AWS',
+                level: 'Expert',
+                description: 'Certified in AWS services for cloud computing and infrastructure.'
+            },
+            {
+                title: 'Docker',
+                level: 'Advanced',
+                description: 'Experienced in using Docker for containerization and deployment.'
+            },
+            {
+                title: 'Kubernetes',
+                level: 'Advanced',
+                description: 'Proficient in using Kubernetes for container orchestration and deployment.'
+            },
+            {
+                title: 'SQL',
+                level: 'Advanced',
+                description: 'Skilled in database management and querying for data analysis.'
+            },
+            {
+                title: 'GitLab',
+                level: 'Expert',
+                description: 'Experienced in using GitLab for continuous integration and delivery.'
+            },
+            {
+                title: 'Bash',
+                level: 'Advanced',
+                description: 'Skilled in automating tasks and managing system operations efficiently.'
+            },
+            {
+                title: 'GoLang',
+                level: 'Intermediate',
+                description: 'Proficient in building high-performance backend services.'
+            },
+            {
+                title: 'Qradar',
+                level: 'Advanced',
+                description: 'Experienced in using IBM QRadar for advanced security information and event management.'
+            },
+            {
+                title: 'SIEM',
+                description: 'Knowledgeable in Security Information and Event Management for comprehensive threat monitoring and analysis, also worked on developing Splunk and Qradar SIEM Apps.'
+            },
+            {
+                title: 'SWG/CASB/ZTNA/RBI',
+                description: 'Equipped with a deep understanding of SWG, CASB, ZTNA, and RBI, ensuring secure and efficient operations in the digital landscape.'
+            }
+        ];
 
-    const skillsList = document.getElementById('skills-list');
+        const skillsList = document.getElementById('skills-list');
 
-    skills.forEach((skill) => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('skill-item');
+        skills.forEach((skill) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('skill-item');
 
-      const titleElement = document.createElement('h2');
-      titleElement.textContent = skill.title;
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = skill.title;
 
-      const levelElement = document.createElement('p');
-      levelElement.textContent = `Level: ${skill.level || 'N/A'}`;
+            const collapsibleButton = document.createElement('button');
+            collapsibleButton.classList.add('collapsible');
+            collapsibleButton.textContent = 'View Details';
 
-      const descriptionElement = document.createElement('p');
-      descriptionElement.textContent = skill.description;
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('content');
 
-      listItem.appendChild(titleElement);
-      listItem.appendChild(levelElement);
-      listItem.appendChild(descriptionElement);
+            const levelElement = document.createElement('p');
+            levelElement.textContent = `Level: ${skill.level || 'N/A'}`;
 
-      skillsList.appendChild(listItem);
-    });
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = skill.description;
 
-  </script>
-  <script>
-    $(function () {
-      $("#navigation").load("navigation.html");
-    });
-  </script>
+            contentDiv.appendChild(levelElement);
+            contentDiv.appendChild(descriptionElement);
+
+            collapsibleButton.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+
+            listItem.appendChild(titleElement);
+            listItem.appendChild(collapsibleButton);
+            listItem.appendChild(contentDiv);
+
+            skillsList.appendChild(listItem);
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </body>
 
 </html>

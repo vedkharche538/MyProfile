@@ -1,113 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Contact Information</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
-    #contact-list {
-      list-style: none;
-      padding: 0;
-    }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
 
-    .contact-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    .contact-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .contact-item p {
-      margin-top: 10px;
-      color: #777;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        #contact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-item p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div id="navigation"></div>
-  <div class="container">
-    <h1>“Contact Information”</h1>
-    <ul id="contact-list">
-    </ul>
-  </div>
+    <!-- Navigation dynamically loaded -->
+    <div id="navigation"></div>
 
-  <script>
-    const contactDetails = [
-      {
-        label: 'Email',
-        value: 'vedhaskharche@gmail.com',
-        link: 'no'
-      },
-      {
-        label: 'LinkedIn',
-        value: 'https://www.linkedin.com/in/vedhas-kharche',
-        link: 'yes'
-      },
-      {
-        label: 'GitHub',
-        value: 'https://github.com/Github://vedhaskharche538',
-        link: 'yes'
-      }
-    ];
+    <!-- Contact Section -->
+    <div class="container">
+        <h1>Contact Information</h1>
+        <ul id="contact-list"></ul>
+    </div>
 
-    const contactList = document.getElementById('contact-list');
+    <!-- Footer -->
+    <footer>
+        © 2024 My Portfolio - All Rights Reserved
+    </footer>
 
-    contactDetails.forEach((detail) => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('contact-item');
+    <script>
+        const contactDetails = [
+            {
+                label: 'Email',
+                value: 'vedhaskharche@gmail.com',
+                link: 'no'
+            },
+            {
+                label: 'LinkedIn',
+                value: 'https://www.linkedin.com/in/vedhas-kharche',
+                link: 'yes'
+            },
+            {
+                label: 'GitHub',
+                value: 'https://github.com/vedhaskharche538',
+                link: 'yes'
+            }
+        ];
 
-      const labelElement = document.createElement('h2');
-      labelElement.textContent = detail.label;
-      listItem.appendChild(labelElement);
-      if (detail.link === 'yes') {
-        const linkElement = document.createElement('a');
-        linkElement.href = detail.link;
-        linkElement.textContent = detail.value;
-        labelElement.appendChild(linkElement);
-        listItem.appendChild(linkElement);
-      }
-      else {
-        const valueElement = document.createElement('p');
-        valueElement.textContent = detail.value;
-        listItem.appendChild(valueElement);
-      }
+        const contactList = document.getElementById('contact-list');
 
-      contactList.appendChild(listItem);
-    });
+        contactDetails.forEach((detail) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('contact-item');
 
-  </script>
-  <script>
-    $(function () {
-      $("#navigation").load("navigation.html");
-    });
-  </script>
+            const labelElement = document.createElement('h2');
+            labelElement.textContent = detail.label;
+            listItem.appendChild(labelElement);
+
+            if (detail.link === 'yes') {
+                const linkElement = document.createElement('a');
+                linkElement.href = detail.value;
+                linkElement.textContent = detail.value;
+                linkElement.target = "_blank"; // Open in a new tab
+                listItem.appendChild(linkElement);
+            } else {
+                const valueElement = document.createElement('p');
+                valueElement.textContent = detail.value;
+                listItem.appendChild(valueElement);
+            }
+
+            contactList.appendChild(listItem);
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </body>
 
 </html>

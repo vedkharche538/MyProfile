@@ -1,129 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Education Qualifications</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Qualifications</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
-    #qualification-list {
-      list-style: none;
-      padding: 0;
-    }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
 
-    .qualification-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    .qualification-item h2 {
-      font-size: 18px;
-      color: #333;
-    }
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .qualification-item p {
-      margin-top: 10px;
-      color: #777;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        #qualification-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .qualification-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .qualification-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .qualification-item p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div id="navigation"></div>
-  <div class="container">
-    <h1>“Education Qualifications”</h1>
-    <ul id="qualification-list">
-    </ul>
-  </div>
+    <!-- Navigation dynamically loaded -->
+    <div id="navigation"></div>
 
-  <script>
-    const qualifications = [
-      {
-        title: 'Bachelor of Engineering in Computer Science',
-        institution: 'K. K. Wagh College of Engineering and Research (Savitribai Phule Pune University)',
-        year: 2020,
-        GPA: '8.7/10'
-      },
-      {
-        title: 'Intermediate Education',
-        institution: 'Sri Chaitanya Jr Khalasala Intermediate School, Telangana, Andhra Pradesh',
-        year: 2016,
-        Percentage: '94%'
-      },
-      {
-        title: 'High School',
-        institution: 'Somalwar high School, Nagpur, Maharashtra',
-        year: 2014,
-        Percentage: '93%'
-      }
+    <!-- Education Section -->
+    <div class="container">
+        <h1>Education Qualifications</h1>
+        <ul id="qualification-list"></ul>
+    </div>
 
-    ];
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Vedhas Kharche. All rights reserved.
+    </footer>
 
-    const qualificationList = document.getElementById('qualification-list');
+    <script>
+        const qualifications = [
+            {
+                title: 'Bachelor of Engineering in Computer Science',
+                institution: 'K. K. Wagh College of Engineering and Research (Savitribai Phule Pune University)',
+                year: 2020,
+                GPA: '9.1/10'
+            },
+            {
+                title: 'Intermediate Education',
+                institution: 'Sri Chaitanya Jr Khalasala Intermediate School, Telangana, Andhra Pradesh',
+                year: 2016,
+                Percentage: '94%'
+            },
+            {
+                title: 'High School',
+                institution: 'Somalwar High School, Nagpur, Maharashtra',
+                year: 2014,
+                Percentage: '93%'
+            }
+        ];
 
-    qualifications.forEach((qualification) => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('qualification-item');
+        const qualificationList = document.getElementById('qualification-list');
 
-      const titleElement = document.createElement('h2');
-      titleElement.textContent = qualification.title;
+        qualifications.forEach((qualification) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('qualification-item');
 
-      const institutionElement = document.createElement('p');
-      institutionElement.textContent = `Institution: ${qualification.institution}`;
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = qualification.title;
 
-      const yearElement = document.createElement('p');
-      yearElement.textContent = `Year: ${qualification.year}`;
+            const institutionElement = document.createElement('p');
+            institutionElement.textContent = `Institution: ${qualification.institution}`;
 
-      const gpaElement = document.createElement('p');
-      if (qualification.GPA) {
+            const yearElement = document.createElement('p');
+            yearElement.textContent = `Year: ${qualification.year}`;
 
-        gpaElement.textContent = `GPA: ${qualification.GPA}`;
+            const detailElement = document.createElement('p');
+            if (qualification.GPA) {
+                detailElement.textContent = `GPA: ${qualification.GPA}`;
+            } else if (qualification.Percentage) {
+                detailElement.textContent = `Percentage: ${qualification.Percentage}`;
+            }
 
-      }
-      const percentageElement = document.createElement('p');
-      if (qualification.Percentage) {
+            listItem.appendChild(titleElement);
+            listItem.appendChild(institutionElement);
+            listItem.appendChild(yearElement);
+            listItem.appendChild(detailElement);
 
-        percentageElement.textContent = `Percentage: ${qualification.Percentage}`;
+            qualificationList.appendChild(listItem);
+        });
+    </script>
 
-      }
-
-      listItem.appendChild(titleElement);
-      listItem.appendChild(institutionElement);
-      listItem.appendChild(yearElement);
-      listItem.appendChild(gpaElement);
-      listItem.appendChild(percentageElement);
-
-      qualificationList.appendChild(listItem);
-    });
-
-  </script>
-  <script>
-    $(function () {
-      $("#navigation").load("navigation.html");
-    });
-  </script>
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </body>
 
 </html>
