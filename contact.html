@@ -4,162 +4,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Information</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e9ecef;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #007bff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .container h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        #contact-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .contact-item {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-left: 5px solid #007bff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-item h2 {
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        .contact-item a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-item p {
-            margin: 10px 0 0;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
-            background-color: #007bff;
-            color: #fff;
-        }
-    </style>
+    <title>Contact - Vedhas Kharche</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <!-- Navigation dynamically loaded -->
-    <div id="navigation"></div>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">VK</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <!-- Contact Section -->
-    <div class="container">
-        <h1>Contact Information</h1>
-        <ul id="contact-list"></ul>
-    </div>
+    <header class="header">
+        <div class="header-content container">
+            <h1 class="animate-in">Contact.connect()</h1>
+            <p class="animate-in">// Let's start a conversation</p>
+        </div>
+    </header>
 
-    <!-- Footer -->
-    <footer>
-        © 2024 My Portfolio - All Rights Reserved
+    <main class="container section">
+        <div class="code-block animate-in">
+            <div class="readable-section">
+                <h2>Get in Touch</h2>
+                <p>I'm always interested in hearing about new opportunities, collaborations, or just having a great tech discussion. Feel free to reach out through any of the channels below.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card animate-in">
+                <h2>Professional Networks</h2>
+                <div class="readable-section">
+                    <h3>Connect Online</h3>
+                    <ul class="readable-list">
+                        <li>LinkedIn: <a href="https://linkedin.com/in/vedhas-kharche" target="_blank">vedhas-kharche</a></li>
+                        <li>GitHub: <a href="https://github.com/vedhas-kharche" target="_blank">vedhas-kharche</a></li>
+                        <li>Twitter: <a href="https://twitter.com/vedhas_kharche" target="_blank">@vedhas_kharche</a></li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Professional Profiles</span>
+                    <span class="code-line">["LinkedIn", "GitHub", "Twitter"]</span>
+                </div>
+            </div>
+
+            <div class="card animate-in">
+                <h2>Direct Contact</h2>
+                <div class="readable-section">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card animate-in">
+                <h2>Other Channels</h2>
+                <div class="readable-section">
+                    <h3>Additional Ways to Connect</h3>
+                    <ul class="readable-list">
+                        <li>Email: contact@vedhas.dev</li>
+                        <li>Dev.to Blog: @vedhas</li>
+                        <li>Medium: @vedhas.writes</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Communication Channels</span>
+                    <span class="code-line">["Email", "Blog", "Social Media"]</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card animate-in mt-2">
+            <h2>Availability</h2>
+            <div class="readable-section">
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3>Work Hours</h3>
+                        <ul class="readable-list">
+                            <li>Monday - Friday: 9 AM - 6 PM IST</li>
+                            <li>Response Time: Within 24 hours</li>
+                            <li>Available for remote collaboration</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Preferred Contact</h3>
+                        <ul class="readable-list">
+                            <li>Professional inquiries: LinkedIn/Email</li>
+                            <li>Technical discussions: GitHub/Twitter</li>
+                            <li>Quick questions: Twitter DMs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Let's Connect!</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <p>© 2024 Vedhas Kharche. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        const contactDetails = [
-            {
-                label: 'Email',
-                value: 'vedhaskharche@gmail.com',
-                link: 'no'
-            },
-            {
-                label: 'LinkedIn',
-                value: 'https://www.linkedin.com/in/vedhas-kharche',
-                link: 'yes'
-            },
-            {
-                label: 'GitHub',
-                value: 'https://github.com/vedhaskharche538',
-                link: 'yes'
-            }
-        ];
-
-        const contactList = document.getElementById('contact-list');
-
-        contactDetails.forEach((detail) => {
-            const listItem = document.createElement('li');
-            listItem.classList.add('contact-item');
-
-            const labelElement = document.createElement('h2');
-            labelElement.textContent = detail.label;
-            listItem.appendChild(labelElement);
-
-            if (detail.link === 'yes') {
-                const linkElement = document.createElement('a');
-                linkElement.href = detail.value;
-                linkElement.textContent = detail.value;
-                linkElement.target = "_blank"; // Open in a new tab
-                listItem.appendChild(linkElement);
-            } else {
-                const valueElement = document.createElement('p');
-                valueElement.textContent = detail.value;
-                listItem.appendChild(valueElement);
-            }
-
-            contactList.appendChild(listItem);
-        });
-    </script>
 
     <script>
         $(function () {
             $("#navigation").load("navigation.html");
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.animate-in').forEach((el) => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+
+            // Handle form submission
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+                // Add your form submission logic here
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+
+            // Initialize scroll behavior
+            let lastScroll = 0;
+            $(window).scroll(function() {
+                const currentScroll = $(this).scrollTop();
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    $('.nav').addClass('nav-hidden');
+                } else {
+                    $('.nav').removeClass('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+
+            // Initialize mobile navigation
+            $('.nav-toggle').click(function() {
+                $('.nav-list').toggleClass('nav-active');
+                $(this).toggleClass('nav-toggle-active');
+            });
+
+            // Add active class to current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            $('.nav-link').each(function() {
+                if ($(this).attr('href') === currentPage) {
+                    $(this).addClass('nav-link-active');
+                }
+            });
         });
     </script>
+
+    <style>
+        .contact-form {
+            margin-top: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-bright);
+            font-family: var(--code-font);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--text-bright);
+            font-family: var(--code-font);
+            transition: all var(--transition-speed);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(0, 255, 157, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+        }
+    </style>
 </body>
 
 </html>

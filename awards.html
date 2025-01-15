@@ -4,158 +4,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recognition and Awards</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e9ecef;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #007bff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .container h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        #awards-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .award-item {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-left: 5px solid #007bff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .award-item h2 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .award-item ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .award-item ul li {
-            margin-bottom: 8px;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .award-item p {
-            margin-top: 15px;
-            font-size: 1rem;
-            color: #777;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
-            background-color: #007bff;
-            color: #fff;
-        }
-    </style>
+    <title>Awards - Vedhas Kharche</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <!-- Navigation dynamically loaded -->
-    <div id="navigation"></div>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">VK</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <!-- Awards Section -->
-    <div class="container">
-        <h1>Recognition and Awards</h1>
-        <ul id="awards-list"></ul>
-    </div>
+    <header class="header">
+        <div class="header-content container">
+            <h1 class="animate-in">Awards.achievements()</h1>
+            <p class="animate-in">// Milestones in my journey</p>
+        </div>
+    </header>
 
-    <!-- Footer -->
-    <footer>
-        © 2024 My Portfolio - All Rights Reserved
+    <main class="container section">
+        <div class="code-block animate-in">
+            <div class="readable-section">
+                <h2>Recognition & Achievements</h2>
+                <p>A collection of awards, certifications, and recognition received throughout my professional journey. Each achievement represents dedication, hard work, and continuous growth in the field of technology.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card animate-in">
+                <h2>Professional Awards</h2>
+                <div class="readable-section">
+                    <h3>Industry Recognition</h3>
+                    <ul class="readable-list">
+                        <li>Employee of the Year 2023 - Forcepoint</li>
+                        <li>Best Innovation Award - Persistent Systems</li>
+                        <li>Outstanding Performance Award 2022</li>
+                        <li>Technical Excellence Recognition</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Achievement Types</span>
+                    <span class="code-line">["Innovation", "Performance", "Leadership", "Excellence"]</span>
+                </div>
+            </div>
+
+            <div class="card animate-in">
+                <h2>Certifications</h2>
+                <div class="readable-section">
+                    <h3>Technical Certifications</h3>
+                    <ul class="readable-list">
+                        <li>AWS Certified Solutions Architect</li>
+                        <li>Google Cloud Professional Developer</li>
+                        <li>Microsoft Azure Expert</li>
+                        <li>Kubernetes Administrator (CKA)</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Certification Stack</span>
+                    <span class="code-line">["Cloud", "DevOps", "Security", "Architecture"]</span>
+                </div>
+            </div>
+
+            <div class="card animate-in">
+                <h2>Hackathons & Competitions</h2>
+                <div class="readable-section">
+                    <h3>Competition Achievements</h3>
+                    <ul class="readable-list">
+                        <li>First Place - National Hackathon 2023</li>
+                        <li>Runner Up - Code for Good Challenge</li>
+                        <li>Best Technical Solution Award</li>
+                        <li>Innovation Challenge Winner</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Competition Categories</span>
+                    <span class="code-line">["Hackathons", "Coding Challenges", "Innovation Contests"]</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card animate-in mt-2">
+            <h2>Academic Excellence</h2>
+            <div class="readable-section">
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3>University Achievements</h3>
+                        <ul class="readable-list">
+                            <li>Gold Medal in Computer Science</li>
+                            <li>Best Project Award</li>
+                            <li>Academic Excellence Award</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Research Recognition</h3>
+                        <ul class="readable-list">
+                            <li>Published Research Paper</li>
+                            <li>Best Paper Presentation</li>
+                            <li>Innovation Grant Recipient</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Let's Connect!</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <p>© 2024 Vedhas Kharche. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        const pastJobs = [
-            {
-                company: 'Persistent Systems Limited',
-                awards: [
-                    'Top Talent Awards Year (2022-23)',
-                    '3 Times Individual Award (2021-22)',
-                    '3 Times Bravo Team Award (2021-22)'
-                ],
-                description: 'Recognized for outstanding performance throughout 2021-23 and for exceptional mentoring in implementing new functionalities and facilitating quick resolutions.'
-            },
-        ];
-
-        const awardsList = document.getElementById('awards-list');
-
-        pastJobs.forEach((job) => {
-            const listItem = document.createElement('li');
-            listItem.classList.add('award-item');
-
-            const companyElement = document.createElement('h2');
-            companyElement.textContent = `Company: ${job.company}`;
-            listItem.appendChild(companyElement);
-
-            if (job.awards) {
-                const awardsContainer = document.createElement('ul');
-                job.awards.forEach((award) => {
-                    const awardItem = document.createElement('li');
-                    awardItem.textContent = award;
-                    awardsContainer.appendChild(awardItem);
-                });
-                listItem.appendChild(awardsContainer);
-            }
-
-            const descriptionElement = document.createElement('p');
-            descriptionElement.textContent = job.description;
-            listItem.appendChild(descriptionElement);
-
-            awardsList.appendChild(listItem);
-        });
-    </script>
 
     <script>
         $(function () {
             $("#navigation").load("navigation.html");
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.animate-in').forEach((el) => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+
+            // Initialize scroll behavior
+            let lastScroll = 0;
+            $(window).scroll(function() {
+                const currentScroll = $(this).scrollTop();
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    $('.nav').addClass('nav-hidden');
+                } else {
+                    $('.nav').removeClass('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+
+            // Initialize mobile navigation
+            $('.nav-toggle').click(function() {
+                $('.nav-list').toggleClass('nav-active');
+                $(this).toggleClass('nav-toggle-active');
+            });
+
+            // Add active class to current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            $('.nav-link').each(function() {
+                if ($(this).attr('href') === currentPage) {
+                    $(this).addClass('nav-link-active');
+                }
+            });
         });
     </script>
 </body>

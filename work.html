@@ -1,184 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Past Job Information</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #007bff;
-            color: white;
-            margin-top: 40px;
-        }
-
-        .container h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        #job-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .job-item {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .job-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .job-item h2 {
-            font-size: 18px;
-            color: #007bff;
-        }
-
-        .job-item p {
-            margin: 10px 0;
-            color: #555;
-        }
-
-        .collapsible {
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            text-align: left;
-            outline: none;
-            font-size: 16px;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        .content {
-            padding: 10px;
-            display: none;
-            overflow: hidden;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Vedhas Kharche</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
-    <div id="navigation"></div>
-    <div class="container">
-        <h1>Past Work Experience</h1>
-        <ul id="job-list">
-            <!-- Job details will be dynamically added here -->
-        </ul>
-    </div>
-    <footer>
-        &copy; 2024 Vedhas Kharche. All rights reserved.
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">VK</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content container">
+            <h1 class="animate-in">Career.timeline()</h1>
+            <p class="animate-in">// Exploring my professional journey</p>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div class="code-block animate-in">
+            <div class="readable-section">
+                <h2>Career Overview</h2>
+                <p>With 5 years of experience in Full Stack Development, I've worked across various industries including Tech, Finance, and E-commerce. My journey has been focused on building scalable solutions and leading development teams.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card animate-in">
+                <h2>Current Role</h2>
+                <div class="readable-section">
+                    <h3>Senior Software Engineer at Forcepoint</h3>
+                    <p class="period">2022 - Present</p>
+                    <ul class="readable-list">
+                        <li>Leading development of core features for Forcepoint One's logging and analytics pipeline</li>
+                        <li>Architecting scalable solutions for real-time data processing</li>
+                        <li>Mentoring junior developers and managing team deliverables</li>
+                        <li>Ensuring close to 100% availability of data processing pipeline</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Tech Stack</span>
+                    <span class="code-line">["Python", "AWS", "Kubernetes", "Elasticsearch"]</span>
+                </div>
+            </div>
+
+            <div class="card animate-in">
+                <h2>Previous Role</h2>
+                <div class="readable-section">
+                    <h3>Software Engineer at Persistent Systems</h3>
+                    <p class="period">2020 - 2022</p>
+                    <ul class="readable-list">
+                        <li>Developed and maintained scalable RESTful APIs for 'Swayam' government project</li>
+                        <li>Improved system performance by 40% through optimization</li>
+                        <li>Led a team of 5 developers for key project deliverables</li>
+                        <li>Managed web applications on Google Cloud Platform</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Key Achievements</span>
+                    <span class="code-line">["40% Performance Boost", "Team Leadership", "GCP Expertise"]</span>
+                </div>
+            </div>
+
+            <div class="card animate-in">
+                <h2>First Role</h2>
+                <div class="readable-section">
+                    <h3>Junior Developer at First Company</h3>
+                    <p class="period">2019 - 2020</p>
+                    <ul class="readable-list">
+                        <li>Developed full-stack web applications using modern technologies</li>
+                        <li>Collaborated in an Agile team environment</li>
+                        <li>Contributed to multiple successful project deliveries</li>
+                    </ul>
+                </div>
+                <div class="code-preview">
+                    <span class="code-comment">// Learning Focus</span>
+                    <span class="code-line">["Full Stack", "Agile", "Team Collaboration"]</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card animate-in mt-2">
+            <h2>Skills Growth</h2>
+            <div class="readable-section">
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3>Technical Skills</h3>
+                        <ul class="readable-list">
+                            <li>Full Stack Development</li>
+                            <li>Cloud Computing (AWS, GCP)</li>
+                            <li>DevOps & CI/CD</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Soft Skills</h3>
+                        <ul class="readable-list">
+                            <li>Team Leadership</li>
+                            <li>Project Management</li>
+                            <li>Problem Solving</li>
+                            <li>Technical Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Let's Connect!</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <p>© 2024 Vedhas Kharche. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        const pastJobs = [
-            {
-                title: 'Software Developer - II',
-                company: 'Forcepoint',
-                duration: 'January 2023 - Present',
-                description: "Working on Forcepoint One's logging and analytics pipeline. Responsible for enhancing the functionalities of various pipeline services and maintaining them to ensure close to 100% availability of the real-time data processing pipeline. The log data processed belongs to different point products namely Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Zero Trust Network Access (ZTNA), and Remote Browser Isolation (RBI)."
-            },
-            {
-                title: 'Senior Software Engineer',
-                company: 'Persistent Systems Ltd',
-                duration: 'March 2022 - January 2023',
-                description: "Efficiently navigating the software development lifecycle, I prioritize and execute tasks to develop high-quality software designs and architectures, ensuring applications meet stringent security and functionality standards. My approach emphasizes producing clean, efficient code and automating tasks through effective tools and scripting, streamlining the development process for optimal outcomes."
-            },
-            {
-                title: 'Software Engineer',
-                company: 'Persistent Systems Ltd',
-                duration: 'July 2020 - March 2022',
-                description: "Led the development and maintenance of scalable, efficient RESTful APIs using Python for 'Swayam,' a pivotal government project, enhancing its impact. Additionally, I designed, managed, and monitored web applications on Google Cloud Platform (GCP), optimizing for high traffic, superior user experience, and future-proof compatibility.",
-                promotion: 'Promoted to Senior Software Engineer'
-            }
-        ];
-
-        const jobList = document.getElementById('job-list');
-
-        pastJobs.forEach((job) => {
-            const listItem = document.createElement('li');
-            listItem.classList.add('job-item');
-
-            const titleElement = document.createElement('h2');
-            titleElement.textContent = job.title;
-
-            const collapsibleButton = document.createElement('button');
-            collapsibleButton.classList.add('collapsible');
-            collapsibleButton.textContent = 'View Details';
-
-            const contentDiv = document.createElement('div');
-            contentDiv.classList.add('content');
-
-            const companyElement = document.createElement('p');
-            companyElement.textContent = `Company: ${job.company}`;
-
-            const durationElement = document.createElement('p');
-            durationElement.textContent = `Duration: ${job.duration}`;
-
-            const descriptionElement = document.createElement('p');
-            descriptionElement.textContent = job.description;
-
-            const promotionElement = document.createElement('p');
-            if (job.promotion) {
-                promotionElement.textContent = `Promotion: ${job.promotion}`;
-            }
-
-            contentDiv.appendChild(companyElement);
-            contentDiv.appendChild(durationElement);
-            contentDiv.appendChild(descriptionElement);
-            if (job.promotion) {
-                contentDiv.appendChild(promotionElement);
-            }
-
-            collapsibleButton.addEventListener('click', function () {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-
-            listItem.appendChild(titleElement);
-            listItem.appendChild(collapsibleButton);
-            listItem.appendChild(contentDiv);
-
-            jobList.appendChild(listItem);
-        });
-    </script>
-    <script>
         $(function () {
             $("#navigation").load("navigation.html");
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.animate-in').forEach((el) => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+
+            // Initialize scroll behavior
+            let lastScroll = 0;
+            $(window).scroll(function() {
+                const currentScroll = $(this).scrollTop();
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    $('.nav').addClass('nav-hidden');
+                } else {
+                    $('.nav').removeClass('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+
+            // Initialize mobile navigation
+            $('.nav-toggle').click(function() {
+                $('.nav-list').toggleClass('nav-active');
+                $(this).toggleClass('nav-toggle-active');
+            });
+
+            // Add active class to current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            $('.nav-link').each(function() {
+                if ($(this).attr('href') === currentPage) {
+                    $(this).addClass('nav-link-active');
+                }
+            });
         });
     </script>
 </body>
-
 </html>

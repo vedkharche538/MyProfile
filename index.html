@@ -4,130 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        main h2 {
-            font-size: 1.5rem;
-            color: #007bff;
-            margin-top: 20px;
-        }
-
-        main ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        main ul li {
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-
-        main a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        main a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #007bff;
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
+    <title>Vedhas Kharche - Developer Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <div id="navigation"></div>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">VK</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <header>
-        <h1>Welcome to My Portfolio</h1>
+    <header class="header">
+        <div class="header-content container">
+            <p class="animate-in">Hello World! I am</p>
+            <h1 class="animate-in">Vedhas Kharche</h1>
+            <p class="animate-in">const role = "Full-Stack Developer & Tech Enthusiast";</p>
+            <div class="code-block animate-in" style="margin-top: 2rem;">
+                <span style="color: var(--accent-color)">class</span> <span style="color: var(--secondary-color)">Developer</span> {
+                <br>&nbsp;&nbsp;constructor() {
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;this.name = "Vedhas";
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;this.skills = ["Web", "Mobile", "Cloud"];
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;this.openToWork = true;
+                <br>&nbsp;&nbsp;}
+                <br>}
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h2>About Me</h2>
-        <ul>
-            <li>You can learn more about me here: <a href="about.html">Know Me!</a></li>
-        </ul>
+    <main class="container section">
+        <div class="grid">
+            <div class="card animate-in">
+                <h2>About Me</h2>
+                <p>const aboutMe = async () => { ... }</p>
+                <a href="about.html" class="btn mt-2">explore()</a>
+            </div>
 
-        <h2>Work Experience</h2>
-        <ul>
-            <li>For details about my past jobs, visit my <a href="work.html">Work Experience</a> page.</li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Work Experience</h2>
+                <p>for (let year of experience) { ... }</p>
+                <a href="work.html" class="btn mt-2">viewCareer()</a>
+            </div>
 
-        <h2>Skills</h2>
-        <ul>
-            <li>Explore my skills and certifications on the <a href="skills.html">Skills & Certifications</a> page.</li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Skills</h2>
+                <p>skills.map(skill => master(skill));</p>
+                <a href="skills.html" class="btn mt-2">getSkills()</a>
+            </div>
 
-        <h2>Projects</h2>
-        <ul>
-            <li>Discover my latest projects on the <a href="projects.html">Projects</a> page.</li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Projects</h2>
+                <p>git commit -m "Always coding something new"</p>
+                <a href="projects.html" class="btn mt-2">showcase()</a>
+            </div>
 
-        <h2>Awards & Achievements</h2>
-        <ul>
-            <li>Check out my awards and achievements <a href="awards.html">here</a>.</li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Awards</h2>
+                <p>achievements.filter(a => a.isNotable);</p>
+                <a href="awards.html" class="btn mt-2">listAwards()</a>
+            </div>
 
-        <h2>Education</h2>
-        <ul>
-            <li>View my educational background <a href="education.html">here</a>.</li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Education</h2>
+                <p>while (learning) { improve(); }</p>
+                <a href="education.html" class="btn mt-2">getEducation()</a>
+            </div>
 
-        <h2>My Hobbies</h2>
-        <ul>
-            <li>Explore my hobbies—we might share some! <a href="hobbies.html">Let's Rock! 🤘🏼</a></li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Hobbies</h2>
+                <p>life.balance(work, play);</p>
+                <a href="hobbies.html" class="btn mt-2">getHobbies()</a>
+            </div>
 
-        <h2>Contact Me</h2>
-        <ul>
-            <li>Feel free to connect with me or reach out <a href="contact.html">here</a>.</li>
-        </ul>
+            <div class="card animate-in">
+                <h2>Contact</h2>
+                <p>await sendMessage(yourIdea);</p>
+                <a href="contact.html" class="btn mt-2">connect()</a>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Vedhas Kharche. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>console.log("Let's Connect!");</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="about.html">about()</a></li>
+                        <li><a href="projects.html">projects()</a></li>
+                        <li><a href="contact.html">contact()</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <p>/* © 2024 Vedhas Kharche. All rights reserved. */</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        $(function () {
-            $("#navigation").load("navigation.html");
+        $(function() {
+            // Initialize scroll behavior
+            let lastScroll = 0;
+            $(window).scroll(function() {
+                const currentScroll = $(this).scrollTop();
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    $('.nav').addClass('nav-hidden');
+                } else {
+                    $('.nav').removeClass('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+
+            // Initialize mobile navigation
+            $('.nav-toggle').click(function() {
+                $('.nav-list').toggleClass('nav-active');
+                $(this).toggleClass('nav-toggle-active');
+            });
+
+            // Add active class to current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            $('.nav-link').each(function() {
+                if ($(this).attr('href') === currentPage) {
+                    $(this).addClass('nav-link-active');
+                }
+            });
+
+            // Existing animation code
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.animate-in').forEach((el) => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
         });
     </script>
 </body>

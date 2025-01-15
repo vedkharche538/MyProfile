@@ -2,69 +2,200 @@
 <html lang="en">
 
 <head>
-  <title>About Me</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      background-color: #007bff;
-      color: white;
-      margin-top: 40px;
-    }
-
-    .container h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Vedhas Kharche</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <!-- Navigation dynamically loaded -->
-  <div id="navigation"></div>
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html" class="nav-logo">VK</a>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="work.html" class="nav-link">Work</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="education.html" class="nav-link">Education</a></li>
+        <li><a href="awards.html" class="nav-link">Awards</a></li>
+        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-  <div class="container">
-    <h1>About Me</h1>
-    <p>
-      Hello! I am a software developer with expertise in Python and other modern technologies. Over the years, I have
-      worked on various innovative projects that span cloud computing, machine learning, and cybersecurity. I enjoy
-      problem-solving and continuously strive to expand my skill set.
-    </p>
-    <p>
-      I am passionate about crafting efficient and scalable solutions that make a real impact. When I'm not coding, you
-      can find me exploring new tech trends or indulging in my favorite hobbies.
-    </p>
-  </div>
-  <footer>
-    &copy; 2024 Vedhas Kharche. All rights reserved.
+  <header class="header">
+    <div class="header-content container">
+      <h1 class="animate-in">About.me()</h1>
+      <p class="animate-in">// The story behind the code</p>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="code-block animate-in">
+      <div class="readable-section">
+        <h2>Personal Introduction</h2>
+        <p>I'm a passionate Full Stack Developer with a love for creating elegant solutions to complex problems. My journey in technology has been driven by curiosity and a constant desire to learn and grow.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card animate-in">
+        <h2>Professional Journey</h2>
+        <div class="readable-section">
+          <h3>Career Path</h3>
+          <ul class="readable-list">
+            <li>Started as a Junior Developer in 2019</li>
+            <li>Quickly advanced to Senior Developer role</li>
+            <li>Led multiple successful project teams</li>
+            <li>Mentored junior developers and interns</li>
+          </ul>
+        </div>
+        <div class="code-preview">
+          <span class="code-comment">// Career Highlights</span>
+          <span class="code-line">["Technical Leadership", "Project Management", "Team Mentoring"]</span>
+        </div>
+      </div>
+
+      <div class="card animate-in">
+        <h2>Technical Philosophy</h2>
+        <div class="readable-section">
+          <h3>Development Approach</h3>
+          <ul class="readable-list">
+            <li>Write clean, maintainable code</li>
+            <li>Focus on scalable architecture</li>
+            <li>Embrace continuous learning</li>
+            <li>Share knowledge with the community</li>
+          </ul>
+        </div>
+        <div class="code-preview">
+          <span class="code-comment">// Core Values</span>
+          <span class="code-line">["Clean Code", "Best Practices", "Innovation", "Collaboration"]</span>
+        </div>
+      </div>
+
+      <div class="card animate-in">
+        <h2>Personal Interests</h2>
+        <div class="readable-section">
+          <h3>Beyond Coding</h3>
+          <ul class="readable-list">
+            <li>Open source contribution enthusiast</li>
+            <li>Tech community organizer</li>
+            <li>Continuous learner and reader</li>
+            <li>Problem-solving advocate</li>
+          </ul>
+        </div>
+        <div class="code-preview">
+          <span class="code-comment">// Interests</span>
+          <span class="code-line">["Open Source", "Tech Events", "Learning", "Innovation"]</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card animate-in mt-2">
+      <h2>Future Goals</h2>
+      <div class="readable-section">
+        <div class="skills-grid">
+          <div class="skills-category">
+            <h3>Professional Goals</h3>
+            <ul class="readable-list">
+              <li>Master cloud architecture</li>
+              <li>Lead larger development teams</li>
+              <li>Contribute to major open source projects</li>
+            </ul>
+          </div>
+          <div class="skills-category">
+            <h3>Personal Growth</h3>
+            <ul class="readable-list">
+              <li>Share knowledge through tech blogs</li>
+              <li>Mentor aspiring developers</li>
+              <li>Build impactful side projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>Let's Connect!</h3>
+          <p>Full-Stack Developer</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul style="list-style: none;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-2">
+        <p>© 2024 Vedhas Kharche. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
   <script>
     $(function () {
       $("#navigation").load("navigation.html");
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      });
+
+      document.querySelectorAll('.animate-in').forEach((el) => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        observer.observe(el);
+      });
+
+      // Initialize scroll behavior
+      let lastScroll = 0;
+      $(window).scroll(function() {
+        const currentScroll = $(this).scrollTop();
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          $('.nav').addClass('nav-hidden');
+        } else {
+          $('.nav').removeClass('nav-hidden');
+        }
+        lastScroll = currentScroll;
+      });
+
+      // Initialize mobile navigation
+      $('.nav-toggle').click(function() {
+        $('.nav-list').toggleClass('nav-active');
+        $(this).toggleClass('nav-toggle-active');
+      });
+
+      // Add active class to current page
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      $('.nav-link').each(function() {
+        if ($(this).attr('href') === currentPage) {
+          $(this).addClass('nav-link-active');
+        }
+      });
     });
   </script>
 </body>
