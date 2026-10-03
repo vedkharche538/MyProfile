@@ -2,7 +2,8 @@ name: Deploy System Architect OS to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -10,8 +11,9 @@ permissions:
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, don't cancel in-progress runs
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +28,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          # No npm cache — this project uses Bun (see setup-bun step below)
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -36,31 +37,36 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: false          # We deploy manually via deploy-pages
-          origin_path_prefix: ""      # Detects user.github.io/repo-name
-
-      - name: Derive basePath from pages_url
+      - name: Derive basePath for project page
         id: basepath
+        shell: bash
         run: |
-          # If repo is a project page (not <user>.github.io), Pages serves from /<repo>/
+          # Project pages (user.github.io/<repo>) need basePath = /<repo>
+          # User pages (user.github.io) need basePath = ""
           REPO="${{ github.event.repository.name }}"
           OWNER="${{ github.event.repository.owner.login }}"
-          if [ "$REPO" != "$OWNER.github.io" ]; then
-            echo "base=/$REPO" >> $GITHUB_OUTPUT
+          if [ "$REPO" = "$OWNER.github.io" ]; then
+            echo "base=" >> "$GITHUB_OUTPUT"
           else
-            echo "base=" >> $GITHUB_OUTPUT
+            echo "base=/$REPO" >> "$GITHUB_OUTPUT"
           fi
+          echo "Derived basePath: $(cat $GITHUB_OUTPUT | cut -d= -f2)"
 
       - name: Build Next.js static export
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.basepath.outputs.base }}
         run: bun run build:static
 
-      - name: Upload artifact
+      - name: Verify index.html exists
+        run: |
+          if [ ! -f "./out/index.html" ]; then
+            echo "::error::out/index.html not found after build!"
+            exit 1
+          fi
+          echo "✓ out/index.html exists ($(wc -c < ./out/index.html) bytes)"
+          echo "✓ out/.nojekyll exists: $([ -f ./out/.nojekyll ] && echo yes || echo no)"
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
