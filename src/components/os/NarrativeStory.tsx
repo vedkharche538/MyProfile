@@ -40,7 +40,7 @@ const STORY_BEATS = [
     metricLabel: "real-time processing",
   },
   {
-    year: "2024",
+    year: "2025",
     headline: "Now I architect systems that don't break.",
     body: "Senior Software Engineer at Abbott. Migrated 15+ AWS Glue ETL pipelines from Redshift to Databricks — 83% runtime reduction (3.5h → 35min). Built FastAPI microservices serving 500K+ daily requests at 99.99% uptime with sub-40ms p99. Shipped a production-grade GenAI RAG microservice replacing legacy AWS Lex for 2,000+ field users.",
     accent: "#8B5CF6",

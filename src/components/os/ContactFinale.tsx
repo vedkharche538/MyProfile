@@ -269,10 +269,7 @@ export function ContactFinale() {
           className="mt-20 pt-8 border-t border-[#F4F4F5]/10"
         >
           <div className="text-xs text-[#6B7280] font-mono">
-            Built with Next.js 16 · React Three Fiber · Framer Motion · Tailwind CSS 4
-          </div>
-          <div className="mt-2 text-xs text-[#6B7280] font-mono">
-            © 2024 {identity.name} · {identity.location}
+            © 2026 {identity.name} · {identity.location}
           </div>
         </motion.div>
       </div>
