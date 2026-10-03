@@ -2,81 +2,48 @@
 
 /**
  * ╔══════════════════════════════════════════════════════════════════╗
- * ║  The System Architect OS — Main page                                ║
+ * ║  Vedhas Kharche — Living Particle Field portfolio                  ║
  * ║                                                                    ║
- * ║  3-mode toggle portfolio for Vedhas Kharche                         ║
- * ║    • Architecture Mode (3D node graph)                              ║
- * ║    • Terminal Mode (CLI shell)                                      ║
- * ║    • Executive Mode (recruiter UI)                                  ║
+ * ║  Single immersive scroll experience:                               ║
+ *    1. NeonHeader      — sticky magnetic nav                           ║
+ *    2. HeroLiving      — draggable 3D + scramble text + cursor BG      ║
+ *    3. NarrativeStory  — story-driven intro with year beats            ║
+ *    4. ProjectsCoverflow — 3D rotating carousel of projects           ║
+ *    5. SkillNodes      — radar + hover-to-link skill grid              ║
+ *    6. ContactFinale   — bold final CTA with easter egg                ║
  * ║                                                                    ║
+ * ║  Plus: ParticleField (full-page neon network) + CustomCursor       ║
  * ║  100% client-side. SSG-ready for GitHub Pages.                     ║
  * ╚══════════════════════════════════════════════════════════════════╝
  */
 
-import { useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useOSStore } from "@/store/useOSStore";
-import { BootSequence } from "@/components/os/BootSequence";
-import { OSHeader } from "@/components/os/OSHeader";
-import { HeroSection } from "@/components/os/HeroSection";
-import { ArchitectureMode } from "@/components/os/ArchitectureMode";
-import { TerminalMode } from "@/components/os/TerminalMode";
-import { ExecutiveMode } from "@/components/os/ExecutiveMode";
-import { ContactFooter } from "@/components/os/ContactFooter";
+import { NeonHeader } from "@/components/os/NeonHeader";
+import { ParticleField } from "@/components/os/ParticleField";
+import { CustomCursor } from "@/components/os/CustomCursor";
+import { HeroLiving } from "@/components/os/HeroLiving";
+import { NarrativeStory } from "@/components/os/NarrativeStory";
+import { ProjectsCoverflow } from "@/components/os/ProjectsCoverflow";
+import { SkillNodes } from "@/components/os/SkillNodes";
+import { ContactFinale } from "@/components/os/ContactFinale";
 
 export default function Page() {
-  const { activeMode, booted } = useOSStore();
-
-  // Body class hook for mode-based effects
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-    document.body.style.backgroundColor = "#0A0D12";
-  }, []);
-
   return (
-    <main className="min-h-screen flex flex-col bg-[#0A0D12] text-[#E2E8F0]">
-      <BootSequence />
-      <OSHeader />
-      <HeroSection />
+    <main id="top" className="relative min-h-screen bg-void text-[#F4F4F5] overflow-x-hidden">
+      {/* Global particle field background */}
+      <ParticleField />
 
-      {/* Mode switcher view */}
-      <section className="relative flex-1 border-t border-[rgba(0,240,255,0.12)]">
-        {/* Mode indicator strip */}
-        <div className="border-b border-[rgba(0,240,255,0.08)] bg-[#0A0D12]/80 backdrop-blur-sm">
-          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between font-mono text-[10px] text-[var(--color-muted-foreground)]">
-            <div className="flex items-center gap-3">
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-cyber-emerald)] animate-pulse" />
-                ACTIVE MODE:
-              </span>
-              <span className="text-[var(--color-cyber-cyan)] font-bold uppercase tracking-wider">
-                {activeMode}
-              </span>
-            </div>
-            <div className="hidden sm:flex items-center gap-3">
-              <span>Tab: autocomplete</span>
-              <span>↑↓: history</span>
-              <span>Ctrl+L: clear</span>
-            </div>
-          </div>
-        </div>
+      {/* Custom cursor */}
+      <CustomCursor />
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeMode}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-          >
-            {activeMode === "architecture" && <ArchitectureMode />}
-            {activeMode === "terminal" && <TerminalMode />}
-            {activeMode === "executive" && <ExecutiveMode />}
-          </motion.div>
-        </AnimatePresence>
-      </section>
-
-      <ContactFooter />
+      {/* Page content */}
+      <div className="relative z-10">
+        <NeonHeader />
+        <HeroLiving />
+        <NarrativeStory />
+        <ProjectsCoverflow />
+        <SkillNodes />
+        <ContactFinale />
+      </div>
     </main>
   );
 }

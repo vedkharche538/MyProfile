@@ -19,13 +19,12 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Vedhas Kharche — Senior Backend & Data Engineer",
+  title: "Vedhas Kharche — System Architect OS",
   description:
-    "Distributed systems architect. Six years building production backends for 10M+ users. Living particle field portfolio.",
+    "Senior Backend & Data Engineer. Distributed systems, cloud architecture, and generative AI at production scale. Interactive portfolio with 3 modes: 3D Architecture, CLI Terminal, and Executive UI.",
   keywords: [
     "Vedhas Kharche",
     "Senior Software Engineer",
@@ -42,14 +41,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Vedhas Kharche" }],
   openGraph: {
-    title: "Vedhas Kharche — Senior Backend & Data Engineer",
-    description: "Distributed systems architect. 10M+ users. 99.99% uptime.",
+    title: "Vedhas Kharche — System Architect OS",
+    description:
+      "Senior Backend & Data Engineer — 6 years building distributed systems on AWS & Databricks.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vedhas Kharche — Senior Backend & Data Engineer",
-    description: "Distributed systems architect. 10M+ users. 99.99% uptime.",
+    title: "Vedhas Kharche — System Architect OS",
+    description: "Senior Backend & Data Engineer portfolio.",
   },
 };
 

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIDiffSettings">
+    <option name="showAIDiff" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="83bfdb5a-7bb1-4c39-a877-2c2dec179968" name="Changes" comment="fix(ci): remove npm cache since project uses bun" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="18" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hariram-corp-fp&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vedkharche538/MyProfile.git",
+    "accountId": "7030ab3a-1c84-46e1-a6a9-68590afaa61f"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0003898166805245" />
+      <entry key="MS500" value="1.7448200638425884" />
+      <entry key="S2" value="5.835074797235656" />
+      <entry key="S5" value="10.303136699880868" />
+      <entry key="S10" value="13.339224666675221" />
+      <entry key="S30" value="16.212483879643564" />
+      <entry key="S60" value="17.072822534023114" />
+      <entry key="M2" value="17.527704807563012" />
+      <entry key="M5" value="17.808976187484095" />
+      <entry key="M10" value="17.91852905682158" />
+      <entry key="M15" value="18.067435377621393" />
+      <entry key="M30" value="19.701779531494815" />
+      <entry key="H1" value="25.72229073404919" />
+      <entry key="H2" value="35.140593564065384" />
+      <entry key="H4" value="43.7815547298959" />
+      <entry key="D1" value="54.38679551674638" />
+      <entry key="W1" value="56.615157832768475" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9730293160730318" />
+      <entry key="MS500" value="1.7289702794177866" />
+      <entry key="S2" value="5.815784035859212" />
+      <entry key="S5" value="10.288530397891362" />
+      <entry key="S10" value="13.32953827932351" />
+      <entry key="S30" value="16.20849768775916" />
+      <entry key="S60" value="17.0707156714685" />
+      <entry key="M2" value="17.526621272000508" />
+      <entry key="M5" value="17.808535323664053" />
+      <entry key="M10" value="17.91830716944855" />
+      <entry key="M15" value="18.0672861110212" />
+      <entry key="M30" value="19.70169714871387" />
+      <entry key="H1" value="25.722234526050393" />
+      <entry key="H2" value="35.14055337158355" />
+      <entry key="H4" value="43.78152900685699" />
+      <entry key="D1" value="54.38679006814272" />
+      <entry key="W1" value="56.615157019376475" />
+    </decayedShown>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/nerdy_website/package.json" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2s785TAam0pSJQUMPMSpcPR5jGp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/vedha/Music/MyProfile",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vedha\Music\MyProfile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vedha\Music\MyProfile" />
+      <recent name="C:\Users\vedha\Music\MyProfile\nerdy_website" />
+      <recent name="C:\Users\vedha\Music\MyProfile\old_profile" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-6fa658e1df1a-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.8665.369" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83bfdb5a-7bb1-4c39-a877-2c2dec179968" name="Changes" comment="" />
+      <created>1737795076133</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737795076133</updated>
+      <workItem from="1737795077783" duration="25000" />
+      <workItem from="1739125288967" duration="641000" />
+      <workItem from="1739541899429" duration="33000" />
+      <workItem from="1741635106572" duration="2165000" />
+      <workItem from="1743098887516" duration="62000" />
+      <workItem from="1743357953573" duration="302000" />
+      <workItem from="1743522181713" duration="241000" />
+      <workItem from="1743522437023" duration="44000" />
+    </task>
+    <task id="LOCAL-00001" summary="Updated the profile">
+      <option name="closed" value="true" />
+      <created>1741637079555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741637079557</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated my profile">
+      <option name="closed" value="true" />
+      <created>1791008536894</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791008536894</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix(ci): remove npm cache since project uses bun">
+      <option name="closed" value="true" />
+      <created>1791008894286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791008894286</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix(ci): remove npm cache since project uses bun">
+      <option name="closed" value="true" />
+      <created>1791009854487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1791009854487</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated the profile" />
+    <MESSAGE value="Updated my profile" />
+    <MESSAGE value="fix(ci): remove npm cache since project uses bun" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(ci): remove npm cache since project uses bun" />
+  </component>
+</project>
